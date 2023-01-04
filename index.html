@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      
+    </head>
+    <body>
+        <input type="text"id="inputone">
+        <button onclick="buttonHandler()">Submit</button>
+        <div id="inputvalue"></div>
+    </body>
+    </html>
+    <script>
+        function buttonHandler(){
+            let input=document.querySelector("#inputone").value;
+            let pattern=/^[a-zA-Z]+@[a-z]+.[a-z]+$/;
+            let result=pattern.test(input);
+            if(result)
+            {
+            document.querySelector("#inputvalue").innerHTML=("result is found");
+            }
+            else
+            {
+            document.querySelector("#inputvalue").innerHTML=("result is not found");
+            }
+
+        }
+</script>
